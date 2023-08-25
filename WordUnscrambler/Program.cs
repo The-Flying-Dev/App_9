@@ -33,16 +33,16 @@ namespace WordUnscrambler
                         break;
                 }
 
-                string continueWordUnscrambleDecision;
+                var continueDecision = string.Empty;
                 do // keep running this loop until 'Y' or 'N' is entered, at the initial execution this "do while statement" evaluates to "true"
                 {
                     Console.WriteLine("Do you want to continue? Y/N");
-                    continueWordUnscrambleDecision = (Console.ReadLine() ?? string.Empty); // Null-coalescing assignment
+                    continueDecision = (Console.ReadLine() ?? string.Empty); // Null-coalescing assignment
 
                 } while (
-                !continueWordUnscrambleDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueWordUnscrambleDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
+                !continueDecision.Equals("Y", StringComparison.OrdinalIgnoreCase) && !continueDecision.Equals("N", StringComparison.OrdinalIgnoreCase));
 
-                continueWordUnscramble = continueWordUnscrambleDecision.Equals("Y", StringComparison.OrdinalIgnoreCase);
+                continueWordUnscramble = continueDecision.Equals("Y", StringComparison.OrdinalIgnoreCase);
 
             } while (continueWordUnscramble);
         }
