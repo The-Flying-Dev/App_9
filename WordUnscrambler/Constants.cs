@@ -1,4 +1,5 @@
-﻿namespace WordUnscambler
+﻿
+namespace WordUnscrambler
 {
     class Constants
     {
